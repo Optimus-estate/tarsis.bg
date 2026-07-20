@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Тарсис — елегантен комплекс на Слънчев бряг | OPTIMUS ESTATE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#FAF8F3;color:#1a1a1a;display:flex;flex-direction:column;align-items:center}
+body>*{width:100%;max-width:900px}
+
+/* ── NAVBAR ── */
+.navbar{background:#FAF8F3;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #EDE7DC;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-svg{width:38px;height:38px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Inter',sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1C2B4B;line-height:1.2}
+.logo-sub{font-family:'Inter',sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1C2B4B;line-height:1.2}
+.btn-bordo{background:#8B1A1A;color:#fff;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:10px 16px;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-decoration:none;border-radius:2px}
+.btn-bordo-sub{font-size:8px;font-weight:400;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:4px}
+.btn-bordo-sub svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ── HERO ── */
+.hero{padding:32px 32px 0;display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start}
+.breadcrumbs{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#8B1A1A;margin-bottom:14px}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#1C2B4B;line-height:1.1;margin-bottom:16px}
+.hero-desc{font-size:13px;color:#444;line-height:1.65}
+.hero-img{width:100%;border-radius:6px;object-fit:cover;display:block;max-height:260px}
+
+/* ── USP STRIP ── */
+.usp-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #EDE7DC;border-bottom:1px solid #EDE7DC;margin-top:28px}
+.usp-item{display:flex;align-items:center;gap:10px;padding:18px 16px;border-right:1px solid #EDE7DC}
+.usp-item:last-child{border-right:none}
+.usp-icon svg{width:28px;height:28px;stroke:#1C2B4B;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.usp-label{font-size:15px;color:#1C2B4B;line-height:1.4;font-weight:500}
+
+/* ── SECTION COMMON ── */
+.section{padding:36px 32px}
+.section-label{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8B1A1A;margin-bottom:12px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#1C2B4B;line-height:1.15;margin-bottom:18px}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.about-text{font-size:13px;color:#444;line-height:1.7;margin-bottom:12px}
+.about-grid > div > .about-text:last-child{margin-bottom:0}
+.about-text b{font-weight:700;color:#1a1a1a}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#EDE7DC;border:1px solid #EDE7DC;border-radius:6px;overflow:hidden;margin-top:0}
+.stat-cell{background:#FAF8F3;padding:20px 24px}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#1C2B4B;line-height:1}
+.stat-unit{font-size:11px;color:#777;margin-top:4px;line-height:1.4}
+.stat-num-red{color:#8B1A1A}
+
+/* ── GALLERY ── */
+.gallery-section{padding:0 32px 36px}
+.gallery-label{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8B1A1A;margin-bottom:16px}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:4px;border-radius:6px;overflow:hidden}
+.gallery-img-big{grid-row:1/3;width:100%;height:100%;object-fit:cover;display:block}
+.gallery-right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:4px}
+.gallery-img-sm{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── LOCATION + FINANCE ── */
+.two-col-section{padding:0 32px 36px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.col-label{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8B1A1A;margin-bottom:12px}
+.col-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#1C2B4B;line-height:1.15;margin-bottom:16px}
+.distance-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #EDE7DC}
+.distance-row:last-child{border-bottom:none}
+.distance-icon svg{width:16px;height:16px;stroke:#8B1A1A;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.distance-label{font-size:13px;color:#444;flex:1}
+.distance-value{font-size:13px;font-weight:600;color:#1a1a1a}
+.tax-table{background:#fff;border:1px solid #EDE7DC;border-radius:4px;overflow:hidden;margin-bottom:20px}
+.tax-table-title{font-size:10px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:0.8px;padding:12px 16px;border-bottom:1px solid #EDE7DC}
+.tax-row{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid #EDE7DC}
+.tax-row:last-child{border-bottom:none}
+.tax-label{font-size:13px;color:#444}
+.tax-value{font-size:13px;font-weight:600;color:#1a1a1a}
+.commission-box{background:#FAF8F3;border:1px solid #EDE7DC;border-radius:4px;padding:16px}
+.commission-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:#8B1A1A;margin-bottom:6px}
+.commission-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#1C2B4B;margin-bottom:8px}
+.commission-text{font-size:12px;color:#555;line-height:1.6}
+
+/* ── CONTACTS + CTA ── */
+.bottom-section{padding:0 32px 36px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.contacts-col{}
+.contacts-label{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8B1A1A;margin-bottom:12px}
+.contacts-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#1C2B4B;margin-bottom:18px}
+.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-card{padding:16px;background:#fff;border:1px solid #EDE7DC;border-radius:4px}
+.contact-name{font-size:13px;font-weight:700;color:#1C2B4B;margin-bottom:4px}
+.contact-phone{font-size:12px;color:#8B1A1A;font-weight:500;margin-bottom:12px}
+.btn-whatsapp{background:#2D9B6F;color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:8px 14px;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;text-decoration:none;border-radius:2px;width:100%;justify-content:center}
+.btn-whatsapp svg{width:14px;height:14px;fill:#fff;flex-shrink:0}
+.cta-col{background:#8B1A1A;border-radius:6px;padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;min-height:100px}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:8px}
+.cta-sub{font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;margin-bottom:20px}
+.btn-cta-white{background:transparent;border:1px solid rgba(255,255,255,0.5);color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:10px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;text-decoration:none;border-radius:2px;align-self:flex-start}
+.btn-cta-white svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ── FOOTER ── */
+.footer{background:#FAF8F3;border-top:1px solid #EDE7DC;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.footer-logo{display:flex;flex-direction:column;align-items:center;gap:4px}
+.footer-logo-name{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#8B1A1A}
+.footer-logo-sub{font-size:8px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8B1A1A}
+.footer-links{font-size:11px;color:#777;display:flex;gap:16px;align-items:center}
+.footer-links a{color:#8B1A1A;text-decoration:none}
+.footer-dot{color:#ccc}
+.footer-copy{font-size:10px;color:#aaa;text-align:center}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .cta-col{order:1}
+  .contacts-col{order:2}
+  .about-grid{grid-template-columns:1fr !important}
+  .about-stats{grid-template-columns:1fr 1fr;margin-top:0}
+  .stat-num{font-size:26px}
+  .stat-num-red{font-size:22px}
+  
+  .gallery-section > div{
+    grid-template-columns:1fr !important;
+    height:auto !important;
+  }
+  .gallery-section > div > img{
+    height:220px !important;
+  }
+  .gallery-section > div > div{
+    grid-template-columns:1fr 1fr !important;
+    grid-template-rows:160px 160px !important;
+  }
+}
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr;padding:24px 16px 0}
+  .usp-strip{grid-template-columns:repeat(2,1fr)}
+  .usp-item:nth-child(2){border-right:none}
+  .section{padding:24px 16px}
+  .about-grid{grid-template-columns:1fr}
+  .gallery-section{padding:0 16px 24px}
+  .gallery-grid{grid-template-rows:180px 180px}
+  .two-col-section{grid-template-columns:1fr;padding:0 16px 24px}
+  .bottom-section{grid-template-columns:1fr;padding:0 16px 24px}
+  .contacts-grid{grid-template-columns:1fr}
+  .footer{padding:20px 16px}
+  .navbar{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="logo-bez.png" alt="logo" class="logo-img" style="height:50px;width:auto"/>
+    <div class="logo-text">
+      <span class="logo-name">OPTIMUS</span>
+      <span class="logo-sub">ESTATE</span>
+    </div>
+  </div>
+
+  <a href="https://optimus-presentacion-ru.netlify.app/" class="btn-bordo">
+    НАУЧЕТЕ ПОВЕЧЕ ЗА НАС
+    <span class="btn-bordo-sub">
+      ВИЖТЕ ПРЕЗЕНТАЦИЯТА
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </span>
+  </a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div>
+    <div class="breadcrumbs">СЛЪНЧЕВ БРЯГ, БЪЛГАРИЯ</div>
+    <h1 class="hero-title">Тарсис — елегантен<br>комплекс на Слънчев бряг</h1>
+    <p class="hero-desc">Модерен жилищен комплекс в сърцето на курорта Слънчев бряг. Идеален за почивка, постоянно обитаване и инвестиции.</p>
+  </div>
+  <div>
+    <img src="tarsis-hero.jpg" alt="Тарсис — изглед към басейна" class="hero-img"/>
+  </div>
+</div>
+
+<!-- ══ USP STRIP ══ -->
+<div class="usp-strip">
+  <div class="usp-item">
+    <div class="usp-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="#1C2B4B"/></svg>
+    </div>
+    <span class="usp-label">Затворена територия</span>
+  </div>
+  <div class="usp-item">
+    <div class="usp-icon">
+      <svg viewBox="0 0 24 24"><path d="M2 12c0 4 3.6 7 8 7s8-3 8-7"/><path d="M2 8c0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4-4 1.8-4 4z"/><path d="M14 8c0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4-4 1.8-4 4z"/><line x1="2" y1="19" x2="22" y2="19"/></svg>
+    </div>
+    <span class="usp-label">Аквапарк на територията</span>
+  </div>
+  <div class="usp-item">
+    <div class="usp-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+    </div>
+    <span class="usp-label">Охрана 24/7 и видеонаблюдение</span>
+  </div>
+  <div class="usp-item">
+    <div class="usp-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+    </div>
+    <span class="usp-label">Гарантиран наем</span>
+  </div>
+</div>
+
+<!-- ══ О КОМПЛЕКСЕ ══ -->
+<div class="section">
+  <div class="section-label">ЗА КОМПЛЕКСА</div>
+  <h2 class="section-title">Комфорт, стил<br>и изгодно разположение</h2>
+  <div class="about-grid">
+    <div>
+      <p class="about-text">Тарсис предлага студия, апартаменти с 1 и 2 спални с продуманo разпределение, качествено оформление и балкони с изглед към басейна или града. Площ на апартаментите от 30 до 95 м².</p>
+<p class="about-text">Комплексът е разположен в самото сърце на Слънчев бряг — на територията има 2 басейна, фитнес зона, SPA център, нощен клуб и развита инфраструктура наблизо.</p>
+<p class="about-text">Отличен избор за лично ползване и за отдаване под наем с висока доходност.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-cell">
+        <div class="stat-num">4</div>
+        <div class="stat-unit">корпуса</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">6</div>
+        <div class="stat-unit">етажа + асансьор</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">120+</div>
+        <div class="stat-unit">апартамента</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num stat-num-red">Акт 16</div>
+        <div class="stat-unit">всички сгради</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ГАЛЕРЕЯ ══ -->
+<div class="gallery-section">
+  <div class="gallery-label">ФОТОГАЛЕРИЯ</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:6px;overflow:hidden;height:404px">
+    <img src="tarsis-1.jpg" alt="Тарсис снимка 1" style="width:100%;height:100%;object-fit:cover;display:block"/>
+    <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px">
+      <img src="tarsis-2.jpg" alt="Тарсис снимка 2" style="width:100%;height:100%;object-fit:cover;display:block"/>
+      <img src="tarsis-3.jpg" alt="Тарсис снимка 3" style="width:100%;height:100%;object-fit:cover;display:block"/>
+      <img src="tarsis-4.jpg" alt="Тарсис снимка 4" style="width:100%;height:100%;object-fit:cover;display:block"/>
+      <img src="tarsis-5.jpg" alt="Тарсис снимка 5" style="width:100%;height:100%;object-fit:cover;display:block"/>
+    </div>
+  </div>
+</div>
+
+<!-- ══ РАСПОЛОЖЕНИЕ + УСЛОВИЯ ══ -->
+<div class="two-col-section">
+  <div>
+    <div class="col-label">РАЗПОЛОЖЕНИЕ</div>
+    <div class="col-title">Всичко наблизо</div>
+    <div class="distance-row">
+      <div class="distance-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <span class="distance-label">Плаж</span>
+      <span class="distance-value">10 мин</span>
+    </div>
+    <div class="distance-row">
+      <div class="distance-icon"><svg viewBox="0 0 24 24"><path d="M3 2l1.5 1.5M21 2l-1.5 1.5M12 2v2M4.22 4.22l1.42 1.42M19.78 4.22l-1.42 1.42"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><path d="M12 20h.01"/><path d="M17 18a5 5 0 0 0-10 0"/></svg></div>
+      <span class="distance-label">Кафенета и ресторанти</span>
+      <span class="distance-value">10 мин</span>
+    </div>
+    <div class="distance-row">
+      <div class="distance-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+      <span class="distance-label">Аквапарк Action</span>
+      <span class="distance-value">10 мин</span>
+    </div>
+    <div class="distance-row">
+      <div class="distance-icon"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+      <span class="distance-label">Супермаркет</span>
+      <span class="distance-value">5 мин</span>
+    </div>
+    <div class="distance-row">
+      <div class="distance-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <span class="distance-label">Стария Несебър</span>
+      <span class="distance-value">15 мин</span>
+    </div>
+    <div class="distance-row">
+      <div class="distance-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <span class="distance-label">Летище Бургас</span>
+      <span class="distance-value">25 мин</span>
+    </div>
+  </div>
+  <div>
+    <div class="col-label">УСЛОВИЯ</div>
+    <div class="col-title">Финансова информация</div>
+    <div class="tax-table">
+      <div class="tax-table-title">Гарантиран наем</div>
+      <div class="tax-row"><span class="tax-label">Студия</span><span class="tax-value">2000 €</span></div>
+      <div class="tax-row"><span class="tax-label">1-стайни апартаменти</span><span class="tax-value">2500 €</span></div>
+      <div class="tax-row"><span class="tax-label">2-стайни апартаменти</span><span class="tax-value">3000 €</span></div>
+    </div>
+    <div class="commission-box">
+      <div class="commission-label">Комисиона</div>
+      <div class="commission-title">В цената няма комисиона</div>
+      <p class="commission-text">Станете собственик без допълнителни разходи. Регистрация на клиента при първия съвместен оглед.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ КОНТАКТЫ + CTA ══ -->
+<div class="bottom-section">
+  <div class="cta-col">
+    <div>
+      <div class="cta-title">Готови ли сте да покажете на клиент?</div>
+      <div class="cta-sub">Вижте актуалната ценова листа за апартаменти Тарсис</div>
+    </div>
+    <a href="https://airtable.com/app4flQF8p47DvF7v/shrA938t57aTDfK68/tbl56x9OZb7wZEV4W" class="btn-cta-white">
+      Вижте цени Тарсис
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="contacts-col">
+    <div class="contacts-label">СВЪРЖЕТЕ СЕ С НАС</div>
+    <h2 class="contacts-title">За въпроси относно огледи</h2>
+    <div class="contacts-grid">
+      <div class="contact-card">
+        <div class="contact-name">Александър</div>
+        <div class="contact-phone">+359 87 769 25 46</div>
+        <a href="https://wa.me/35987769254" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Василий</div>
+        <div class="contact-phone">+359 89 517 66 85</div>
+        <a href="https://wa.me/35989517668" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="logo.png" alt="logo" class="logo-img" style="height:100px;width:auto"/>
+  </div>
+  <div class="footer-links">
+    <a href="https://bolgarskidom.com">bolgarskidom.com</a> · <a href="mailto:optimusbg@mail.ru">optimusbg@mail.ru</a>
+  </div>
+  <div class="footer-copy">Презентация на комплекс Тарсис · Слънчев бряг, България</div>
+</footer>
+
+</body>
+</html>
