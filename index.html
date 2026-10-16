@@ -11,6 +11,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:#FAF8F3;color:#1a1a1a;display:flex;flex-direction:column;align-items:center}
 body>*{width:100%;max-width:900px}
+@media(min-width:1100px){body>*{max-width:1000px}}
+@media(min-width:1500px){body>*{max-width:1120px}}
 
 /* ── NAVBAR ── */
 .navbar{background:#FAF8F3;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #EDE7DC;position:sticky;top:0;z-index:100}
@@ -190,6 +192,35 @@ body>*{width:100%;max-width:900px}
   .cta-sub{font-size:13px}
 
 }
+
+/* ── FONT SCALE (единая шкала для компьютера и телефона) ── */
+.breadcrumbs,.section-label,.contacts-label,.gallery-label,.col-label,.commission-label{font-size:11px}
+.hero-desc,.about-text,.commission-text{font-size:14px}
+.infra-text,.tax-label,.tax-value,.distance-label,.distance-value,.distance-title,.loc-t,.loc-v,.contact-phone,.usp-label{font-size:14px}
+.stat-unit,.tax-table-title,.cta-sub,.contact-card .btn-whatsapp,.btn-whatsapp,.btn-cta,.btn-cta-white,.btn3d{font-size:12px}
+.contact-name{font-size:15px}
+.loc-chip{font-size:11px}
+.footer-links{font-size:12px}
+.footer-copy{font-size:11px}
+.hero-title{font-size:36px}
+.commission-title{font-size:22px}
+.cta-title{font-size:24px}
+.contacts-title{font-size:26px}
+.stat-num,.stat-num-red,.stat-num-green{font-size:32px}
+@media(max-width:700px){
+  .hero-title{font-size:30px}
+  .commission-title,.cta-title{font-size:22px}
+  .contacts-title{font-size:24px}
+  .stat-num,.stat-num-red,.stat-num-green{font-size:28px}
+}
+@media(max-width:700px){
+  .hero-desc,.about-text,.commission-text{font-size:15px}
+  .infra-text,.tax-label,.tax-value,.distance-label,.distance-value,.distance-title,.loc-t,.loc-v,.contact-phone,.usp-label{font-size:14px}
+  .loc-chip{font-size:13px}
+  .tax-table-title{font-size:11px}
+  .stat-unit,.cta-sub,.btn-whatsapp,.btn-cta,.btn-cta-white{font-size:12px}
+  .btn3d{font-size:11px}
+}
 </style>
 </head>
 <body id="top">
@@ -296,7 +327,7 @@ body>*{width:100%;max-width:900px}
       <p class="about-text">Тарсис се намира в самото сърце на курорта Слънчев бряг. Плажът, ресторантите и кафенетата, супермаркетът и аквапаркът са наблизо, в рамките на 10 минути.</p>
       <p class="about-text">До Стария Несебър — <b>15 минути</b>, до летище Бургас — <b>25 минути</b>.</p>
     </div>
-    <a class="loc-map" href="https://maps.app.goo.gl/pxEMFyffvc4NYpAm7" target="_blank" rel="noopener" aria-label="Отвори Тарсис на картата">
+    <a class="loc-map" href="https://www.google.com/maps/search/?api=1&query=Tarsis+Hotel+and+Aqua+Park+Sunny+Beach" target="_blank" rel="noopener" aria-label="Отвори Тарсис на картата">
       <img src="location-map.jpg" alt="Карта: местоположение на комплекс Тарсис на Слънчев бряг" loading="lazy"/>
       <span class="loc-chip"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>Отвори на картата</span>
     </a>
